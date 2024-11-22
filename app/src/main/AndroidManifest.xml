@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- Background location permission for apps targeting Android 10 (API 29) and above -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Background location permission for apps targeting Android 10 (API 29) and above -->
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
@@ -18,23 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Crypto"
         tools:targetApi="31">
-
+        <activity
+            android:name=".SQLiteActivity"
+            android:exported="false" />
         <!-- SplashActivity as the launcher activity -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- LoginActivity -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-
-        <!-- MainActivity -->
+        </activity> <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
